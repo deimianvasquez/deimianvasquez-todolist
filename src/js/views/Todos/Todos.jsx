@@ -70,6 +70,7 @@ const Todos = () => {
                 })
                 if (response.ok) {
                     getAllTask()
+                    setTask(initialTask)
                 }
             } catch (error) {
                 console.log(error)
@@ -120,7 +121,7 @@ const Todos = () => {
         <div className="container">
             <div className="row justify-content-center">
                 <div className="col-12 col-md-7">
-                    <h1>Lista de tareas</h1>
+                    <h1 className="text-center mt-4">Lista de tareas</h1>
                     <form onSubmit={(event) => event.preventDefault()}>
                         <input
                             type="text"
