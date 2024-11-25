@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./Todos.css"
 
 
 const initialTask = {
@@ -117,7 +118,7 @@ const Todos = () => {
 
     return (
         <div className="container">
-            <div className="row">
+            <div className="row justify-content-center">
                 <div className="col-12 col-md-7">
                     <h1>Lista de tareas</h1>
                     <form onSubmit={(event) => event.preventDefault()}>
@@ -135,12 +136,10 @@ const Todos = () => {
                         taskList.length <= 0 ? <div> no tiene tareas</div> :
 
                             taskList.map((item) => (
-                                <div key={item.id} className="task">
+                                <div key={item.id} className="task-list">
                                     {item.label}
                                     <span>
                                         <button onClick={() => deleteTask(item.id)}>X</button>
-                                        {/* <button onClick={() => editTask(item)}>E</button> */}
-
                                         <input
                                             className="form-check-input mt-0"
                                             type="checkbox"
