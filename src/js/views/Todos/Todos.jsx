@@ -146,7 +146,8 @@ const Todos = () => {
                                             type="checkbox"
                                             aria-label="Checkbox for following text input"
                                             checked={item.is_done}
-                                            onClick={() => editTask(item)}
+                                            value={item.is_done}
+                                            onChange={() => editTask(item)}
 
                                         />
                                     </span>
